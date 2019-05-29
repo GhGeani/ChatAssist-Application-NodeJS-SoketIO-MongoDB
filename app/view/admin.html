@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src=""></script>
+    <title>Admin Panel</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/admin.js"></script>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+    <form class='admin-form'>
+        <div class='form-group'>
+            <input type="text" name="username" id="username" class='form-control input-name'
+                placeholder="Username here.. " />
+                <input type="password" name="password" id="password" class='form-control input-password'
+                placeholder="Password here.. " />
+            <button type="submit" class='btn btn-primary btn-block'>Enter</button>
+        </div>
+    </form>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <table class="users-container table table-sm table-bordered">
+                    <thead>
+                        <tr>
+                            <th> User ID</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="selected-chat col-md-4">
+                <!--Selected chatbox goes here-->
+            </div>
+            <div class="right-panel col-md-4">
+                <table class="admins table table-striped table-hover table-sm">
+                    <thead>
+                        <tr>
+                            <th>
+                                Admins Online
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="admins-list">
+                    </tbody>
+                </table>
+                <div class="chatbox-adm">
+                    <form>
+                        <span class="title-chat"><i class="material-icons">people_outline</i> Local Chat </span>
+                        <input class="form-control form-control-sm input-chat-adm" type="text" placeholder="Type here.." />
+                    </form>
+                    <ul class="chat-body-adm"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

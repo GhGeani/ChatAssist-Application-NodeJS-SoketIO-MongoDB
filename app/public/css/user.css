@@ -1,0 +1,213 @@
+html, body, .grid-container { height: 100%; margin: 0px; padding: 0px;}
+
+html, body{
+    background: 
+    linear-gradient(
+        to right,
+      rgba(193, 194, 153, 0.548), 
+      rgba(73, 186, 179, 0.8)
+    ),
+    /* bottom, image */
+    url("../images/bg.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+*{
+    font-size: 1.2vw;
+    font-family: 'Lato', sans-serif;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+
+*{
+    font-size: 1.1vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.open-chat {
+    grid-area: open-chat;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    font-size: 50px;
+}
+
+.open-chat:hover{
+    transition: 0.2s;
+    font-size: 50px;
+    background-color: lightseagreen;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.hide-chat {
+    float: right;
+    display: inline-block;   
+    width: 20%;
+    border: 1px solid red;
+}
+
+.title {
+    font-size: 1.5vw;
+    color: white;
+    background-color: #0066D3;
+    width: 80%;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    float: left;
+
+}
+
+.chatbox {
+    grid-area: chatbox;
+    display: none;
+    position: fixed;
+    opacity: 0.8;
+    right: 5px;
+    bottom: 0px;
+    width: 20%;
+    height: 50%;
+    border: 1px solid grey;
+    margin: 1%;
+    box-shadow: 10px 10px 10px rgba(194, 208, 223, 0.8)
+}
+
+.chat-header {
+    height: auto;
+}
+
+
+.chat-header form {
+   
+}
+
+.chat-body {
+    list-style: none;
+    padding: 4%;
+    overflow: auto;
+    height: 80%;
+    background-color: white;
+
+}
+
+.chat-body li {
+    display: inline-block;
+    clear: both;
+    width: 77%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.chatbox form {
+    margin: 0;
+    border-bottom: 0.3px solid grey;
+}
+
+.user {
+    float: right;
+    background: #0084ff;
+    margin-right: 8px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: rgb(255, 255, 255);
+
+}
+
+.admin {
+    background: #F1F0F0;
+    float: left;
+    margin-left: 8px;
+    color: rgb(0, 0, 0);
+}
+
+.user+.user {
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+}
+
+
+.user:last-of-type {
+    border-bottom-right-radius: 30px;
+}
+
+
+
+.you {
+    float: left;
+    background: rgb(197, 197, 197);
+    color: rgb(19, 18, 18);
+    margin-right: 7px;
+    padding: 3px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    font-size: 1.4vw;   
+
+}
+
+.me {
+    float: right;
+    background: rgb(37, 144, 231);
+    color: #fff;
+    margin-left: 7px;
+    padding: 3px;
+    padding-right: 10px;
+    width: 100%;
+    text-align: end;
+    border-bottom: 1px solid white;
+    font-size: 1.4vw;   
+}
+
+.you:hover{
+    transition: 0.1s;
+    border-radius: 5px;
+    border-bottom-width: 2px;
+
+}
+.me:hover {
+    transition: 0.1s;
+    border-radius: 5px;
+    border-bottom-width: 2px;
+
+}
+
+.date {
+    width: 100%;
+    text-align: end;
+    border-top: 1px solid grey;
+    font-style: oblique;
+    font-size: 0.9vw;
+}
+
+
+.container {
+    display: grid;
+    margin: 2px;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    ". . . . . ."
+    ". . . . . ."
+    ". . . . . ."
+    ". . . . . ."
+    ". . open-chat . chatbox chatbox";
+}
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Website</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/user.js"></script>
+    <link rel="stylesheet" href="/css/user.css">
+</head>
+
+<body>
+    <div class="container">
+        <i class="material-icons btn btn-primary open-chat">question_answer</i>
+        <div class="chatbox">
+            <div class="chat-header">
+                <span class="title"><i class="material-icons">question_answer</i> Chat Support </span>
+
+                <button type='button' value="Hide" class="btn btn-danger btn-sm hide-chat"><i
+                        class="material-icons">close</i></button>
+                <form>
+                    <input class="form-control input" type="text" placeholder="What is your problem?" />
+                </form>
+            </div>
+            <ul class="chat-body"></ul>
+        </div>
+    </div>
+</body>
+
+</html>
